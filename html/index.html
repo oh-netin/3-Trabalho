@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="../css/menu.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
@@ -15,7 +17,7 @@
 
   <style>
     #carouselExampleCaptions {
-      width: 50%;
+      width: 60%;
       margin: auto;
     }
 
@@ -28,20 +30,22 @@
   <title>Bootstrap v5.0</title>
 </head>
 
-<body>
+<body onload="retirarMsg()">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
         <h2>F<span class="text-warning">i</span>re Not<span class="text-warning">í</span>cias</h2>
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Início</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Personagens</a>
@@ -68,21 +72,28 @@
   </nav>
 
   <br />
-  <div class="container">
-    <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">Bem-vindo!</h4>
-      <p>Sinta-se a vontade para explorar nosso site! Sua presença nos alegra muito. <span
-          class="badge bg-success">Volte sempre!</span></p>
-    </div>
 
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Pesquise em nosso site..." aria-label="Recipient's username"
-        aria-describedby="button-addon2">
-      <button class="btn btn-secondary" type="button" id="button-addon2">Pesquisar</button>
+  <div class="container">
+
+    <div class="alert alert-success" role="alert" id="msg_boasvindas">
+      <h4 class="alert-heading">Bem-vindo! <span id="user"></span> </h4>
+      <p>Sinta-se a vontade para explorar nosso site! Sua presença nos alegra muito. <span
+          class="badge bg-success">Volte sempre!</span>
+      </p>
     </div>
 
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 ms-auto">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Pesquise em nosso site..."
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-secondary" type="button" id="button-addon2">Pesquisar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
         <ul class="list-group">
           <li class="list-group-item text-truncate active" aria-current="true">Menu Principal</li>
           <li class="list-group-item text-truncate">Celulares</li>
@@ -96,10 +107,10 @@
         </ul>
       </div>
 
-      <div class="col-8">
+      <div class="col-9">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Em Promoção</a>
+            <a class="nav-link active" aria-current="page" href="#">Novos Personagens</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Mais Vendidos</a>
@@ -110,8 +121,9 @@
         </ul>
 
         <div class="row">
-          <div class="col-6">
-            <div class="card me-auto" style="width: 18rem;">
+
+          <div class="col-4">
+            <div class="card me-auto" style="width: 16rem;">
               <img src="img/carregador.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Carregador Portátil</h5>
@@ -120,8 +132,9 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="card ms-auto" style="width: 18rem;">
+          
+          <div class="col-4">
+            <div class="card ms-auto" style="width: 16rem;">
               <img src="img/pocox3.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Poco X3</h5>
@@ -130,51 +143,73 @@
               </div>
             </div>
           </div>
+          
+          <div class="col-4">
+            <div class="card ms-auto" style="width: 16rem;">
+              <img src="img/pocox3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Poco X3</h5>
+                <p class="card-text">Celular top de linha pelo melhor preço.</p>
+                <a href="#" class="btn btn-primary">Ver mais</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel carousel-dark slide mt-5 mb-5" data-bs-ride="carousel">
+      
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
         <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
         <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
       </ol>
+      
       <div class="carousel-inner">
+       
         <div class="carousel-item active">
-          <img src="img/Bolsa.jpeg" class="d-block w-100" alt="promoção">
-          <div class="carousel-caption d-none d-md-block bg-warning">
-            <h5>Bolsa</h5>
-            <p>Qualidade, beleza e preço.</p>
+          <img src="../img/cr7.jpg" class="d-block w-100" alt="promoção">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="fw-bold">Novo Personagem</h5>
+            <p>CR7 com habilidades incomuns chega ao jogo .</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="img/bolsa2.jpeg" class="d-block w-100" alt="promoção">
-          <div class="carousel-caption d-none d-md-block bg-warning">
-            <h5>Bolsa</h5>
-            <p>Qualidade, beleza e preço.</p>
+          <img src="../img/alok.jpg" class="d-block w-100" alt="promoção">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="fw-bold">Sendo trocado?</h5>
+            <p>Alok, antes o personagem indispensável, teve uma queda significativa com o usu do CR7.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="img/bolsa3.jpeg" class="d-block w-100" alt="promoção">
-          <div class="carousel-caption d-none d-md-block bg-warning">
-            <h5>Bolsa</h5>
-            <p>Qualidade, beleza e preço.</p>
+          <img src="../img/moco.png" class="d-block w-100" alt="promoção">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="fw-bold"> A Hacker</h5>
+            <p>Com sua marcação ao acertar o oponente, Moco é uma personagem essencial para os suportes.</p>
           </div>
         </div>
+
       </div>
+      
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </a>
+      
       <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </a>
     </div>
   </div>
+
+  <footer>
+    <script src="../js/arquivo.js"></script>
+  </footer>
 
 </body>
 
