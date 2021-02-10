@@ -1,8 +1,0 @@
- body {
-     transition: all 1s linear;
- }
-
-.ocultarMsg {
-    display: none;
-    transition: display 1s linear;
-}
