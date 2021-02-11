@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <style>
+        #carouselExampleCaptions {
+            width: 60%;
+            margin: auto;
+        }
+
+        #carouselExampleCaptions img {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+
+    <title>Bootstrap v5.0</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h2>F<span class="text-warning">i</span>re Not<span class="text-warning">í</span>cias</h2>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="personagens.html">Personagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Patentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sistema
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="forms/cadastrar.html">Cadastrar-se</a></li>
+                            <li><a class="dropdown-item" href="forms/login.html">Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br />
+
+    <div class="container" id="container">
+
+        <!--  Cards  -->
+        <div class="row">
+            <div class="col-12">
+                <div class="row mb-3 mt-2  d-flex justify-content-center">
+                    <div class="col-sm-auto">
+                        <div class="card me-auto ms-auto" style="width: 16rem;">
+                            <img src="../img/personagens/cover.jpg" class="card-img-top" alt="Chrono"
+                                title="De Garena Free Fire">
+                            <div class="card-body">
+                                <h5 class="card-title">Chrono</h5>
+                                <p class="card-text text-truncate">Caçador de recompensas vindo de outra dimensão.</p>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-chrono"
+                                    class="btn btn-warning">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-auto">
+                        <div class="card me-auto ms-auto" style="width: 16rem;">
+                            <img src="../img/personagens/K_cover.jpg" class="card-img-top" alt="imagem Kamir"
+                                title="De Garena Free Fire">
+                            <div class="card-body">
+                                <h5 class="card-title">Kamir</h5>
+                                <p class="card-text text-truncate">Professor e especialista em Jui-Jitsu.</p>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-kamir"
+                                    class="btn btn-warning">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-auto">
+                        <div class="card me-auto ms-auto" style="width: 16rem;">
+                            <img src="../img/personagens/Luqueta.jpg" class="card-img-top" alt="imagem Luqueta"
+                                title="De Garena Free Fire">
+                            <div class="card-body">
+                                <h5 class="card-title">Luqueta</h5>
+                                <p class="card-text text-truncate">Estrela do futebol em ascensão.</p>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-luqueta"
+                                    class="btn btn-warning">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-auto">
+                        <div class="card me-auto ms-auto" style="width: 16rem;">
+                            <img src="../img/personagens/Clu1.jpg" class="card-img-top" alt="imagem Evelyn"
+                                title="De Garena Free Fire">
+                            <div class="card-body">
+                                <h5 class="card-title">Evelyn</h5>
+                                <p class="card-text text-truncate">Evelyn é uma grande detetive particular.</p>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-evelyn" class="btn btn-warning">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--  Modal  -->
+
+        <div class="modal fade" id="modal-chrono" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Chrono</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body m-3">
+                        <p><span class="fw-bold">Gênero:</span> Masculino</p>
+                        <p><span class="fw-bold">Idade:</span> 35</p>
+                        <p><span class="fw-bold">Aniversário:</span> 05/02</p>
+
+                        <h5 class="modal-title mb-1">História:</h5>
+
+                        <p style="text-align: justify;">
+                            "Chrono vem de uma dimensão paralela onde a ciência e a tecnologia superam o que temos no
+                            nosso
+                            atual
+                            planeta Terra.
+
+                            Ele teve uma uma infância normal em seu mundo original. Seus pais eram advogados famosos que
+                            lutavam
+                            contra a pobreza e buscavam inserir a população sem-teto na sociedade. Isso fez com que ele
+                            sempre se
+                            mantivesse atento aos grupos vulneráveis da sociedade. Conforme ele foi crescendo, Chrono
+                            foi
+                            descubrindo
+                            novas formas de ajuda os outros."
+                        </p>
+                        <h5 class="modal-title">Habilidade:</h5>
+                        <p class="card-text">
+                            Cria um campo de força que bloqueia danos de inimigos. Pode-se atirar em inimigos externos
+                            de dentro do campo de força. A velocidade de movimento aumenta e os aliados dentro do campo
+                            de força aumentam a velocidade de movimento durante a ativação da habilidade
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-kamir" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Kamir</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body m-3">
+                        <p><span class="fw-bold">Gênero:</span> Masculino</p>
+                        <p><span class="fw-bold">Idade:</span> 31</p>
+                        <p><span class="fw-bold">Aniversário:</span> 06/10</p>
+                        <p class="fw-bold mb-1">História:</p>
+                        <p style="text-align: justify;">
+                            "K era um garoto esperto, mas como a maioria das crianças da idade dele ele não levou a
+                            escola a
+                            sério. Quando ele tinha 16 anos, ainda estava no último ano do ensino médio, ele entrou em
+                            um
+                            acidente de carro e machucou a coluna. Os médicos disseram-lhe que ele nunca mais voltaria a
+                            andar. Mas ele se recusou a desistir- este não seria o fim para ele. Ele foi à fisioterapia,
+                            fez
+                            sua própria terapia em casa, e encontrou um treinador para ajudá-lo a avançar. Em um ano,
+                            ele
+                            estava andando; em dois ele estava praticando esportes. Esta experiência ensinou-lhe algumas
+                            coisas que ficariam com ele para a vida toda.
+                            - Não tome a vida como garantida.
+                            - Ele teve que se aprofundar para superar a experiência e aprendeu a entender a si mesmo,
+                            suas
+                            motivações, bem como seu lugar no mundo.
+                            - Um efeito colateral disso era que ele agora podia ler e entender as pessoas ao seu redor
+                            da
+                            mesma maneira.
+                            - Ele também queria tornar seu corpo e mente mais fortes para nunca mais se machucar da
+                            mesma
+                            maneira."
+                        </p>
+                        <h5 class="modal-title">Habilidade:</h5>
+                        <p class="card-text">
+                            Max EP aumenta em 50. Modo Jiujitsu: Aliados dentro de 6m recebem aumento de 500% na taxa de conversão de EP. Modo Psicologia: Recupere 2 EP a cada {4}, até {6} EP. Mode switch CD 20s.    
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade" id="modal-luqueta" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Luqueta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body m-3">
+                        <p><span class="fw-bold">Gênero:</span> Masculino</p>
+                        <p><span class="fw-bold">Idade:</span>20</p>
+                        <p><span class="fw-bold">Aniversário:</span> 10/06</p>
+                        <p class="fw-bold mb-1">História:</p>
+                        <p style="text-align: justify;">
+                            "Luqueta era um estudante de intercâmbio do exterior. Ele se mudou por causa do trabalho do
+                            pai. O pai dele queria que ele seguisse os passos dele, conseguisse um MBA e entrasse no
+                            negócio. Mas Luqueta viu a vida do pai e não queria nada disso. Ele sempre foi um garoto
+                            atético. Quando ele se mudou, começou a jogar futebol pela escola, ele sabia que era bom
+                            quando era criança, mas no ensino médio ele se tornou uma estrela. Ele nem precisou se
+                            esforçar tanto e foi incrível."
+                        </p>
+                        <h5 class="modal-title">Habilidade:</h5>
+                        <p class="card-text">
+                            Cria um campo de força que bloqueia danos de inimigos. Pode-se atirar em inimigos externos
+                            de dentro do campo de força. A velocidade de movimento aumenta e os aliados dentro do campo
+                            de força aumentam a velocidade de movimento durante a ativação da habilidade
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-evelyn" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Evelyn</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body m-3">
+                        <p><span class="fw-bold">Gênero:</span> Feminino</p>
+                        <p><span class="fw-bold">Idade:</span>24</p>
+                        <p><span class="fw-bold">Aniversário:</span> 28/02</p>
+                        <p class="fw-bold mb-1">História:</p>
+                        <p style="text-align: justify;">
+                            "Evelyn cresceu em um subúrbio de uma cidade grande. Seus pais eram ricos, nunca tiveram que se preocupar com o básico da vida e ela teve uma infância muito amorosa. Quando ela era adolescente, seu pai foi recrutado para o esforço de guerra. A guerra terminou um ano depois e ele nunca mais voltou para casa. Ele nunca foi encontrado. Clu tornou-se uma detetive de detetive particular depois de se formar no ensino médio na esperança de descobrir detalhes sobre o desaparecimento de seu pai."
+                        </p>
+                        <h5 class="modal-title">Habilidade:</h5>
+                        <p class="card-text">
+                            Localize posições de inimigos que não estejam em posição propensa ou agachada, CD 50s. Os companheiros de equipe compartilham efeitos de habilidade após o nível 4.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <script src="../js/arquivo.js"></script>
+        </footer>
+
+</body>
+
+</html>
