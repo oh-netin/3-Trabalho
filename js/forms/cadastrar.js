@@ -1,3 +1,4 @@
+
 /**
  * Separamos uma function para cada campo, nome, senha e confirmar a senha;
  * na function validar, fazemos denovo a validação para não passar nada;
@@ -15,6 +16,7 @@ function validar() {
      * Além de valizador os campos, se algum estiver errado vai aparecer uma mensagem de erro na tela
      * Trabalhamos somente com classes do próprio Bootstrap.
      * 
+     * Mais uma ação diversa:
      * Se estiver válido, aparece mensagem em verde;
      * Se não vai aparecer uma mensagem de erro
      * 
@@ -37,7 +39,6 @@ function validar() {
  * Todas as functions retornam um valor booleano para verificar 
  * e modificar a mensagem caso tenha algum erro;
  */
-
 function validarNome() {
 
     /**
@@ -76,7 +77,7 @@ function validarIdade() {
      */
 
     let _idade = document.getElementById("idade");
-    console.log(Number(_idade.value.length));
+
     if (_idade.value == 0) {
         _idade.setCustomValidity("Por favor, insira uma idade!");
         _idade.focus();
