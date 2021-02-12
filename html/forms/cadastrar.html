@@ -16,32 +16,95 @@
 
     <link rel="stylesheet" href="../../css/forms/cadastrar.css">
 
-    <title>Cadastrar</title>
+    <title>Cadastrar - Fire Notícias</title>
 </head>
 
 <body class="bg-secondary">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <h2>F<span class="text-warning">i</span>re Not<span class="text-warning">í</span>cias</h2>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../noticias.html">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../personagens.html">Personagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../patentes.html">Patentes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sistema
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class=" active disabled dropdown-item" href="forms/cadastrar.html">Cadastrar-se</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="alert alert-success w-50 me-auto ms-auto" role="alert" id="msg_validacao" onload="msgValidacao()">
+            <h4 class="alert-heading">Bem-vindo a área de cadastro!</h4>
+            <p>Sinta-se a vontade para se cadastrar! <span class="badge bg-success">@User!</span>
+            </p>
+        </div>
+        <div class="alert alert-danger d-none w-50 me-auto ms-auto" role="alert" id="msg_erro">
+            <h4 class="alert-heading">Dados inválidos!</h4>
+            <p>Preencha os campos corretamente. <span class="badge bg-danger">@user!</span>
+            </p>
+        </div>
+    </div>
+
+
     <div class="bg-dark border border-white area my-5">
         <form action="login.html" method="POST">
             <div class="d-flex justify-content-center">
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
-                        <label for="nome" class="text-warning">Nome</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Insira um nome" required onkeyup="validarNome()">
+                        <label for="nome" class="text-warning requerid">Nome de usuário</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Insira um nome de usuário"
+                            required onkeyup="validarNome()">
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="senha" class="text-warning">Sobrenome</label>
-                        <input type="password" class="form-control" id="senha"
-                            placeholder="Insira uma senha"  maxlength="10" required onkeyup="validarSenha()">
+                        <label for="idade" class="text-warning requerid">Idade</label>
+                        <input type="number" class="form-control" id="idade" placeholder="Ex: 19" required
+                            onkeyup="validarIdade()">
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="confirmar" class="text-warning">Senha</label>
-                        <input type="password" class="form-control" id="confirmar"
-                            placeholder="Confirme sua senha" maxlength="10" required onkeyup="validarConfirmar()">
+                        <label for="senha" class="text-warning requerid">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Insira uma senha"
+                            maxlength="10" required onkeyup="validarSenha()">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="confirmar" class="text-warning requerid">Confirmar</label>
+                        <input type="password" class="form-control" id="confirmar" placeholder="Confirme sua senha"
+                            maxlength="10" required onkeyup="validarConfirmar()">
                     </div>
                 </div>
             </div>
             <div class="d-flex justify-content-around mt-3">
-                <button class="btn btn-warning" style="font-weight: 500;" type="submit" onclick="validar()">Cadastrar-se</button>
+                <button class="btn btn-warning" style="font-weight: 500;" id="btnSubmit" type="submit"
+                    onclick="validar()">Cadastrar-se</button>
             </div>
         </form>
     </div>
