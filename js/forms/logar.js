@@ -20,7 +20,7 @@ function validar() {
      * 
      */
 
-    if (!validarNome() || !validarSenha() || !validarConfirmar()) {
+    if (!validarNome() || !validarSenha()) {
         document.getElementById("msg_validacao").classList.add("d-none");
         document.getElementById("msg_validacao").classList.remove("d-block");
         document.getElementById("msg_erro").classList.add('d-block');
@@ -82,37 +82,6 @@ function validarSenha() {
         return false;
     } else {
         _senha.setCustomValidity("");
-        return true;
-    }
-}
-
-function validarConfirmar() {
-
-    /**
-     * 
-     * Pegamos o DOM do elemento html pelo id e verificamos se seu valor da confirmação é menor que 
-     * 5 caracteres, como já temos a function validarSenha(), só chamamos ela e verificamos 
-     * se a senha tá ok;
-     * caso esteja alguma errada, aparece uma mensagem de erro na tela no canto superior centraliado, 
-     * se não, vida que segue novamente... KKKKK;
-     * 
-     */
-
-    let _senha = document.getElementById("senha");
-    let _confirmar = document.getElementById("confirmar");
-
-    validarSenha();
-
-    if (_confirmar.value.length <= 5 || _confirmar.value.length > 10) {
-        _confirmar.setCustomValidity("Por favor, insira uma senha entre 6 e 10 caracteres");
-        return false;
-
-    } else if (_confirmar.value != _senha.value) {
-        _confirmar.setCustomValidity("As senhas devem ser iguais");
-        _confirmar.focus();
-        return false;
-    } else {
-        _confirmar.setCustomValidity("");
         return true;
     }
 }
