@@ -19,5 +19,3 @@ var colocarAnuncio = setTimeout(() => {
 }, 5000);
 
 
-
-

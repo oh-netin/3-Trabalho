@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../img/4629IMG-20200623-WA0080.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <title>Quiz FF</title>
+</head>
+
+<body onload="piscar()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <h2>F<span class="text-warning">i</span>re Not<span class="text-warning">í</span>cias</h2>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="noticias.html">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personagens.html">Personagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="patentes.html">Patentes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sistema
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="forms/cadastrar.html">Cadastrar-se</a></li>
+                            <li><a class="dropdown-item" href="forms/login.html">Login</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active disabled fw-bold" id="quiz" href="quiz.html">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-control mt-4">
+            <div class="row ">
+                <div class="col-12">
+                    <form action="quiz.html" method="post">
+                        <div class="col-sm-auto mt-3">
+                            <div class="form-control" id="peg1">
+                                <label for="p1" class="fw-bold">Qual foi a primeira equipe campeã do mundo?</label>
+                                <div id="p1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p1" id="loudGG" value="loud">
+                                        <label class="form-check-label" for="loudGG">
+                                            LOUD GG
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p1" id="redKalunga"
+                                            value="red">
+                                        <label class="form-check-label" for="redKalunga">
+                                            RED Canids Kalunga
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p1" id="corinthians"
+                                            value="corinthians">
+                                        <label class="form-check-label" for="redKalunga">
+                                            SCCP Corinthians
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p1" id="team" value="team">
+                                        <label class="form-check-label" for="team">
+                                            Team Liquid
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-auto mt-3">
+                            <div class="form-control" id="peg2">
+                                <label for="p1" class="fw-bold">Quantos anos o free fire tem?</label>
+                                <div id="p1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p2" id="1" value="1">
+                                        <label class="form-check-label" for="1">
+                                            1 ano
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p2" id="2" value="2">
+                                        <label class="form-check-label" for="2">
+                                            2 anos
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p2" id="3" value="3">
+                                        <label class="form-check-label" for="3">
+                                            3 anos
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p2" id="4" value="4">
+                                        <label class="form-check-label" for="4">
+                                            4 anos
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-auto mt-3">
+                            <div class="form-control" id="peg3">
+                                <label for="p3" class="fw-bold">Em que temporada foi lançada a primeira blusa de
+                                    mestre?</label>
+                                <div id="p3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p3" id="1temp" value="1temp">
+                                        <label class="form-check-label" for="1">
+                                            1 Temporada
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p3" id="2temp" value="2temp">
+                                        <label class="form-check-label" for="2">
+                                            2 Temporada
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p3" id="5temp" value="5temp">
+                                        <label class="form-check-label" for="3">
+                                            5 Temporada
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p3" id="14temp"
+                                            value="14temp">
+                                        <label class="form-check-label" for="4">
+                                            14 Temporada
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-auto mt-3">
+                            <div class="form-control" id="peg4">
+                                <label for="p4" class="fw-bold">Qual a pontuação das rankeadas para que seja
+                                    possivel
+                                    pegar a patente mestre? </label>
+                                <div id="p4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p4" id="3050" value="3050">
+                                        <label class="form-check-label" for="1">
+                                            3050
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p4" id="3200" value="3200">
+                                        <label class="form-check-label" for="3200">
+                                            3200
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p4" id="5000" value="5000">
+                                        <label class="form-check-label" for="5000">
+                                            5000
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p4" id="3250" value="3250">
+                                        <label class="form-check-label" for="3250">
+                                            3250
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-auto mt-3">
+                            <div class="form-control" id="peg5">
+                                <label for="p3" class="fw-bold">No total, já foram quantas temporadas das
+                                    rankeadas?</label>
+                                <div id="p5">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p5" id="17" value="17">
+                                        <label class="form-check-label" for="17">
+                                            17
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p5" id="18" value="18">
+                                        <label class="form-check-label" for="18">
+                                            18
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p5" id="19" value="19">
+                                        <label class="form-check-label" for="19">
+                                            19
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="p5" id="20" value="20">
+                                        <label class="form-check-label" for="20">
+                                            20
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-around mt-3">
+                            <button type="reset" class="btn btn-outline-primary ms-auto me-3" onclick="reiniciar()">
+                                Reiniciar
+                            </button>
+                            <button class="btn btn-success me-auto ms-3" style="font-weight: 500;" id="btnSubmit"
+                                type="button" onclick="verificar()">Verificar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="d-flex justify-content-center pt-3 bg-dark text-white mt-2">
+            <div class="row">
+                <div class="col-sm-auto fs-5">
+                    <p>
+                        Desenvolvedores:
+                        <span class="badge bg-warning text-dark">
+                            Felipe Barros
+                        </span> e
+                        <span class="badge bg-warning text-dark">
+                            Severino Neto
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="../js/quiz.js"></script>
+    </footer>
+</body>
+
+</html>
