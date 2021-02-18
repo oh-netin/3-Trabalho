@@ -1,17 +1,17 @@
 .area {
-    width: 400px;
-    margin: 0 auto;
-    padding: 10px;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    border-radius: 5px;
+    width: 400px;   /* Tamanho da largura vai ser de 400px */
+    margin: 0 auto; /* Margem na horizontal vai ser automática */
+    padding: 10px;  /* Espaçamento interno em todos os lados vai ser de 10px */
+    padding-top: 50px;  /* Espaçamento interno do topo vai ser de 50px */
+    padding-bottom: 40px; /* Espaçamento interno inferior vai ser de 40px */
+    border-radius: 5px; /* A curva dos cantos da borda vai ser de 5px */
 }
 
 .area input {
-    width: 250px;
+    width: 250px; /* inputs dentro da classe area irão ter uma largura de 250px */
 }
 
 label {
-    width: 250px;
-    font-weight: 500;
+    width: 250px; /* Os label irão ter uma largura de 250px*/
+    font-weight: 500; /* E o tom de negrito desses label serão de 500, um tom de negrito leve */
 }

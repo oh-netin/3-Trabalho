@@ -6,21 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../../img/4629IMG-20200623-WA0080.ico">
+    <!--  Código responsável por inserir um ícone na aba do navegador web -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/4629IMG-20200623-WA0080.ico">
 
+    <!--  Código responsável por pegar o css  do bootstrap v5.0-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!--  Código responsável por pegar o JS  do bootstrap v5.0-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+    
+    <!--  Chamada de uma folha de estilo externa  -->
     <link rel="stylesheet" href="../../css/forms/login.css">
 
     <title>Login - Fire Notícias</title>
+
 </head>
 
 <body class="bg-secondary">
+
+    <!--  Criação de um menu de navegação
+
+    navbar: indica que vai ser um menu  responsivo 
+    navbar-expand-lg: A parti de uma largura lg da tela, o menu é escondindo;
+    container: cria um container responsivo centralizado para possuir elementos dentro dela
+    navbar-brand: indica que uma título ou logo da página vai ser mostrada
+    text-warning: A cor do texto vai ser uma tonalidade de "amarelo"
+    navbar-toggler: vai ser o botão quando a largura da tela for menor que o tamanho lg
+    navbar-toggler-icon: o ícone que vai aparecer no botão
+    collapse navbar-collapse: indica que esse menu vai ser na horizontal, em uma linha
+    navbar-nav: indica que ali vai estar o menu de navegação
+    nav-item: indica que aquele elemento é um item do menu
+    nav-link: indica que aquele elemento é um link do menu
+    active: junto com a classe link, vai indicar que aquele link estar ativo no momento
+    desable: junto com a classe link, vai indicar que aquele link estar desabilitado, não podendo ser clicado
+    dropdown: junto com a classe item, vai dizer que aquele item do menu vai ter submenus dentro dele
+    dropdown-toggle: vai indicar que aquela elemento vai ser a parte visível para quando clicar, aparecer o submenu
+    dropdown-menu: indica que ali vai estar o submenu que vai aparecer quando clicarmos no dropdown-toggle
+    ms: indica a margin-left que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+    me: indica a margin-right que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+    fw: indica o font-weight que vai ser atribuido, bold ou outros valores que vem junto a classe
+    -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -67,12 +95,44 @@
         </div>
     </nav>
 
+    <!--  Conteudo  
+
+    container: cria um container responsivo centralizado para possuir elementos dentro dela
+    mt: Indica que a magem do topo vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+    mb: Indica que a magem inferior vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+    my Indica que a magem no eixo Y vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+    w: Indica a % do tamanho da tela, valores definidos no bootstrap
+    border: Indica que o elemento vai possuir bordas
+    border-white: cor da borda vai ser branca
+    alert alert-success: indica que vai ser uma div em forma de alerta de cor "verde"  
+    alert-heading: indica que vai ser o cabeçalho do alert
+    badge: vai ter um efeito na palavra, uma decoração
+    bg: especifica a cor do back-ground, e o valor de especificado pelo bootstrap ex: bg-success, bg-warning
+    btn e btn-warning: indica que vai ser um botão com os estilos dados
+    
+
+
+    functions () {...}
+
+    validarNome() -> Faz uma validação do nome do usuário após o evento ser acionado
+    validarSenha() -> Faz uma validação da senha do usuário após o evento ser acionado
+
+    
+
+    Eventos DOM:
+    
+    onkeyup="function()" -> Após o usuário saldar uma tecla pressionada, dispara o evento e execulta a função informada
+    onclick="function()" -> Após o usuário clicar no elemento, dispara o evento e execulta a função informada
+
+    -->
+
     <div class="container mt-3">
         <div class="alert alert-success w-50 me-auto ms-auto" role="alert" id="msg_validacao" onload="msgValidacao()">
             <h4 class="alert-heading">Bem-vindo a área de Login!</h4>
             <p>Insira todos os dados corretaente! <span class="badge bg-success">@User!</span>
             </p>
         </div>
+        
         <div class="alert alert-danger d-none w-50 me-auto ms-auto" role="alert" id="msg_erro">
             <h4 class="alert-heading">Dados inválidos!</h4>
             <p>Preencha os campos corretamente. <span class="badge bg-danger">@user!</span>
@@ -103,7 +163,19 @@
         </form>
     </div>
 
+    <!--  footer
+
+        d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
+        justify-content-center: os elementos vão ser centralizados
+        row: cria uma linha com grid de 12 colunas
+        col: cria uma coluna, o valor depois ex: col-12 indica quantas colunas do grid aquele elemento vai possuir
+        fs: font-size com escala de 1 a 5, escalas predefinidas pelo bootstrap 
+        badge: vai ter um efeito na palavra, uma decoração
+        bg-warning: especifica a cor do back-ground, no caso um tom "amarelo"
+    -->
+
     <footer>
+
         <div class="d-flex justify-content-center pt-3 bg-dark text-white mt-2">
             <div class="row">
                 <div class="col-sm-auto fs-5">
@@ -119,7 +191,8 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Chama um arquivo Javascript Externo, depois que a página é carregada, para evitar erros com a falta desse carregamento -->
         <script src="../../js/forms/logar.js"></script>
     </footer>
 </body>

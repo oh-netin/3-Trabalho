@@ -17,5 +17,3 @@ var colocarAnuncio = setTimeout(() => {
   document.getElementById("recarga-jogo").classList.remove('d-none');
   document.getElementById("recarga-jogo").classList.add('d-block');
 }, 5000);
-
-

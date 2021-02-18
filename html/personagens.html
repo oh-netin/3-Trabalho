@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--  Código responsável por inserir um ícone na aba do navegador web -->
     <link rel="shortcut icon" type="image/x-icon" href="../img/4629IMG-20200623-WA0080.ico">
 
+    <!--  Código responsável por pegar o css  do bootstrap v5.0-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <!--  Código responsável por pegar o JS  do bootstrap v5.0-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
@@ -20,6 +23,30 @@
 </head>
 
 <body>
+
+    <!--  Criação de um menu de navegação
+
+    navbar: indica que vai ser um menu  responsivo 
+    navbar-expand-lg: A parti de uma largura lg da tela, o menu é escondindo;
+    container: cria um container responsivo centralizado para possuir elementos dentro dela
+    navbar-brand: indica que uma título ou logo da página vai ser mostrada
+    text-warning: A cor do texto vai ser uma tonalidade de "amarelo"
+    navbar-toggler: vai ser o botão quando a largura da tela for menor que o tamanho lg
+    navbar-toggler-icon: o ícone que vai aparecer no botão
+    collapse navbar-collapse: indica que esse menu vai ser na horizontal, em uma linha
+    navbar-nav: indica que ali vai estar o menu de navegação
+    nav-item: indica que aquele elemento é um item do menu
+    nav-link: indica que aquele elemento é um link do menu
+    active: junto com a classe link, vai indicar que aquele link estar ativo no momento
+    desable: junto com a classe link, vai indicar que aquele link estar desabilitado, não podendo ser clicado
+    dropdown: junto com a classe item, vai dizer que aquele item do menu vai ter submenus dentro dele
+    dropdown-toggle: vai indicar que aquela elemento vai ser a parte visível para quando clicar, aparecer o submenu
+    dropdown-menu: indica que ali vai estar o submenu que vai aparecer quando clicarmos no dropdown-toggle
+    ms: indica a margin-left que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+    me: indica a margin-right que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+    fw: indica o font-weight que vai ser atribuido, bold ou outros valores que vem junto a classe
+    -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -66,13 +93,34 @@
 
     <br />
 
+    <!--  Conteudo  
+
+    container: cria um container responsivo centralizado para possuir elementos dentro dela
+    -->
+
     <div class="container" id="container">
         <div class="mb-5 mt-3">
             <h2 class="text-center">Posterioarmente iremos implementar os demais personagens</h2>
             <p class="fs-5 text-center">Esta aba até então é só um molde</p>
         </div>
 
-        <!--  Cards  -->
+        <!--  Cards -> Isso para todos os modal abaixo
+
+        row: cria uma linha com grid de 12 colunas
+        col: cria uma coluna, o valor depois ex: col-12 indica quantas colunas do grid aquele elemento vai possuir
+        nav nav-tabs: indica que vai ser um menu de navegação na horizontal, porem com um estilo difereente do navbar-collapse
+        nav-item: indica que aquele elemento é um item do menu
+        nav-link: indica que aquele elemento é um link do menu
+        active: junto com a classe link, vai indicar que aquele link estar ativo no momento
+        card-body: indica que aquele conteúdo é do corpo do card
+        cars-title: indica que aquele ementento é um título daquele card
+        text-truncate: estiliza o texto para caso ele estrapole o limite, não se quebre linha e sim apareça reticencias no final da lina, indicando que ten mais coisas a ser mostrada
+        d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
+        justify-content-center: os elementos vão ser centralizados
+        btn e btn-outline-primary: indica que vai ser um botão com os estilos dados
+        fw: indica o font-weight que vai ser atribuido, bold ou outros valores que vem junto a classe 
+        -->
+
         <div class="row">
             <div class="col-12">
                 <div class="row mb-3 mt-2  d-flex justify-content-center">
@@ -290,8 +338,17 @@
 
 
 
-        <!--  Modal  -->
+        <!--  Modal  -> Isso para todos os modal abaixo
 
+        modal: indica que tudo o que estiver dentro dessa div com essa classe vai ser o conteúdo do modal
+        fade: Vei deixar o modal com uma transição mais suave
+        modal-header: indica que o que tiver dentro vai ser o cabeçalho do modal
+        modal-title: Indica que o elemento que possue essa clásse vai ser o título do modal
+        modal-body: Indica que o que estiver dentro desse elemento vai ser o corpo do modal
+        modal-footer: Indica que o que estiver dentro desse elemento vai ser o rodapé do modal
+        m-3: Todas as margens vai possuir o valor 3 para o elemento que possuir essa clásse
+        mb: a margin-bottom vai ser o valor passado
+        -->
         <div class="modal fade" id="modal-chrono" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -451,6 +508,17 @@
         </div>
     </div>
 
+
+    <!--  footer
+
+    d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
+    justify-content-center: os elementos vão ser centralizados
+    row: cria uma linha com grid de 12 colunas
+    col: cria uma coluna, o valor depois ex: col-12 indica quantas colunas do grid aquele elemento vai possuir
+    fs: font-size com escala de 1 a 5, escalas predefinidas pelo bootstrap 
+    badge: vai ter um efeito na palavra, uma decoração
+    bg-warning: especifica a cor do back-ground, no caso um tom "amarelo"
+    -->
     <footer>
         <div class="d-flex justify-content-center pt-3 bg-dark text-white mt-2">
             <div class="row">
@@ -467,8 +535,6 @@
                 </div>
             </div>
         </div>
-
-        <script src="../js/arquivo.js"></script>
     </footer>
 
 </body>
