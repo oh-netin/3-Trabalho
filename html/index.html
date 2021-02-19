@@ -19,6 +19,18 @@
     crossorigin="anonymous"></script>
 
   <style>
+
+    div div div div div img.img-fluid {
+      /* classes img-fluid dentro das tags img irão ter um tamanho de 70% em relação ao pai */
+      width: 70%;
+    }
+
+    p.fs-3,
+    p.fs-5 {
+      /* classes fs-3 e fs-5 dentro das tags p irão ter o texto justificado */
+      text-align: justify;
+    }
+
     /* limita o tamanho do carrousel e deixa centralizado */
     #carouselExampleCaptions {
       width: 60%;
@@ -30,6 +42,7 @@
       width: 50%;
       margin: auto;
     }
+
   </style>
 
   <title>Home</title>
@@ -75,9 +88,6 @@
         <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active disabled" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="noticias.html">Notícias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="personagens.html">Personagens</a>
@@ -136,6 +146,7 @@
     </div>
   </div>
 
+
   <!--  Conteudo  
 
   container: cria um container responsivo centralizado para possuir elementos dentro dela
@@ -145,36 +156,149 @@
 
   <div class="container" id="container">
 
-    <!--  Cards  
+    <!--
+    
+    
+      row: cria uma linha com grid de 12 colunas
+    col: cria uma coluna, o valor depois ex: col-11 indica quantas colunas do grid aquele elemento vai possuir
+    m-auto: as margens desse elemento vai ser automáticas
+    mb: a margin-bottom vai ser o valor passado
+    d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
+    justify-content-center: os elementos vão ser centralizados
+    fs: font-size com escala de 1 a 5, escalas predefinidas pelo bootstrap 
+    badge: vai ter um efeito na palavra, uma decoração
+    bg-info: Indica que esse elemento vai ter a cor de fundo referente a essa cor, definida pelo bootstrap
+    text-center: alinha o texto ao centro
+    
+  
+    -->
 
-  row: cria uma linha com grid de 12 colunas
-  col: cria uma coluna, o valor depois ex: col-12 indica quantas colunas do grid aquele elemento vai possuir
-  nav nav-tabs: indica que vai ser um menu de navegação na horizontal, porem com um estilo difereente do navbar-collapse
-  nav-item: indica que aquele elemento é um item do menu
-  nav-link: indica que aquele elemento é um link do menu
-  active: junto com a classe link, vai indicar que aquele link estar ativo no momento
-  card-body: indica que aquele conteúdo é do corpo do card
-  cars-title: indica que aquele ementento é um título daquele card
-  text-truncate: estiliza o texto para caso ele estrapole o limite, não se quebre linha e sim apareça reticencias no final da lina, indicando que ten mais coisas a ser mostrada
-  d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
-  justify-content-center: os elementos vão ser centralizados
-  btn e btn-outline-primary: indica que vai ser um botão com os estilos dados
-  fw: indica o font-weight que vai ser atribuido, bold ou outros valores que vem junto a classe 
-  -->
     <div class="row">
+      <div class="col-11 m-auto">
+        <div class="row  mt-3">
+          <div class="col-sm-auto d-flex justify-content-center">
+            <div class="">
+              <div>
+                <h2 class="text-center mb-3">Incubadora Tropa Sombrias</h2>
+                <p class="fs-5">Nova incubadora Tropas Sombrias chega hoje (11/02), de olho nos novos itens:</p>
+                <p class="mb-5">Free Fire Incubator (FF) é uma roleta onde você vai girar para obter itens
+                  (bilhetes, skins, crachás, etc.) e também os muito raros Projetos e Pedras da Evolução . Cada giro
+                  custará 60 Diamantes, 5 Spin custará 270 Diamantes e um item raro é garantido em 3 rodadas.</p>
+              </div>
+              <div class="row">
+                <div class="col-sm-auto">
+                  <h4 class="fs-5">Incubadora Tropa Sombrias: Pacote Soldado Vulcânico:</h4>
+                  <p>O pacote da Incubadora Tropas Sombrias com a skin
+                    <span class="badge bg-warning text-dark">Soldado Vulcânico</span>
+                    (unissex) mistura as tonalidades amarela e preta em suas composições.
+                  </p>
+                  <div class=" d-flex justify-content-center">
+                    <img class="img-fluid" src="../img/incubadora/soldado_volcanicojpeg.jpeg" alt="soldado volcanico"
+                      title="Soldado Vulcanico">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-12 border-bottom pb-4">
+        <div class="row  mt-5">
+          <div class="col-sm-auto d-flex justify-content-center">
+            <div class="">
+              <div class="row">
+                <div class="col-sm-auto">
+                  <h4 class="fs-5">Incubadora Tropa Sombrias: Pacote Soldado Glacial:</h4>
+                  <p>O pacote da Incubadora Tropas Sombrias com a skin
+                    <span class="badge bg-info text-dark">Soldado Glacial</span>
+                    (unissex) mistura as tonalidades azul e preta em suas composições.
+                  </p>
+                  <div class=" d-flex justify-content-center">
+                    <img class="img-fluid" src="../img/incubadora/soldado_glacial.jpeg" alt="soldado_glacial"
+                      title="Soldado Glacial">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row  mt-5">
+          <div class="col-sm-auto d-flex justify-content-center">
+            <div class="">
+              <div class="row">
+                <div class="col-sm-auto">
+                  <h4 class="fs-5">Incubadora Tropa Sombrias: Pacote Soldado Sombrio:</h4>
+                  <p>O pacote da Incubadora Tropas Sombrias com a skin
+                    <span class="badge text-dark" style="background-color: blueviolet;">Soldado Sombrio</span>
+                    (unissex) mistura as tonalidades roxa e preta em suas composições.
+                  </p>
+                  <div class=" d-flex justify-content-center">
+                    <img class="img-fluid" src="../img/incubadora/soldado_sombrio.jpeg" alt="soldado_glacial"
+                      title="Soldado Glacial">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row  mt-5">
+          <div class="col-sm-auto d-flex justify-content-center">
+            <div class="">
+              <div class="row">
+                <div class="col-sm-auto">
+                  <h4 class="fs-5">Incubadora Tropa Sombrias: Pacote Soldado Espacial:</h4>
+                  <p>O pacote da Incubadora Tropas Sombrias com a skin
+                    <span class="badge bg-success text-dark">Soldado Espacial</span>
+                    (unissex) mistura as tonalidades verde e preta em suas composições.
+                  </p>
+                  <div class=" d-flex justify-content-center">
+                    <img class="img-fluid" src="../img/incubadora/soldado_espacial.jpeg" alt="soldado_glacial"
+                      title="Soldado Glacial">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  
+      
+    
+    Cards:  
+    
+    row: cria uma linha com grid de 12 colunas
+    col: cria uma coluna, o valor depois ex: col-12 indica quantas colunas do grid aquele elemento vai possuir
+    nav nav-tabs: indica que vai ser um menu de navegação na horizontal, porem com um estilo difereente do navbar-collapse
+    nav-item: indica que aquele elemento é um item do menu
+    nav-link: indica que aquele elemento é um link do menu
+    active: junto com a classe link, vai indicar que aquele link estar ativo no momento
+    card-body: indica que aquele conteúdo é do corpo do card
+    cars-title: indica que aquele ementento é um título daquele card
+    text-truncate: estiliza o texto para caso ele estrapole o limite, não se quebre linha e sim apareça reticencias no final da lina, indicando que ten mais coisas a ser mostrada
+    d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
+    justify-content-center: os elementos vão ser centralizados
+    btn e btn-outline-primary: indica que vai ser um botão com os estilos dados
+    fw: indica o font-weight que vai ser atribuido, bold ou outros valores que vem junto a classe 
+    
+    -->
+
+    <div class="row mt-5">
+
+      <div class="col-12 border-bottom pb-4" onmouseenter="sobre()">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" id="novos_personagens" aria-current="page" href="#novos_personagens">Novos
+            <a class="nav-link active" id="link-pers" aria-current="page" onclick="mostrarPersonagens()">Novos
               Personagens</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#novas_armas">Novas Armas</a>
+            <a class="nav-link" id="link-armas" aria-current="page" onclick="mostrarArmas()">Novas Armas</a>
           </li>
         </ul>
 
-        <div class="row mb-3 mt-2  d-flex justify-content-center">
+        <div class="row mb-3 mt-2 d-flex justify-content-center" id="personagens">
 
           <div class="col-sm-auto mb-3">
             <div class="card me-auto ms-auto" style="width: 16rem;">
@@ -222,17 +346,81 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12">
-          <div class="d-flex justify-content-center mt-5">
-            <a href="personagens.html">
-              <button class="btn btn-outline-primary fw-bold">
-                <h4 class="pt-1">Ver Todos</h4>
-              </button>
-            </a>
+          <div class="col-12">
+            <div class="d-flex justify-content-center mt-5">
+              <a href="personagens.html">
+                <button class="btn btn-outline-primary fw-bold">
+                  <h4 class="pt-1">Ver Todos</h4>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
+
+        <!--  Novas Armas 
+    
+        row: cria uma linha com grid de 12 colunas
+        col: cria uma coluna, o valor depois ex: col-12 indica quantas colunas do grid aquele elemento vai possuir
+        nav nav-tabs: indica que vai ser um menu de navegação na horizontal, porem com um estilo difereente do navbar-collapse
+        nav-item: indica que aquele elemento é um item do menu
+        nav-link: indica que aquele elemento é um link do menu
+        active: junto com a classe link, vai indicar que aquele link estar ativo no momento
+        card-body: indica que aquele conteúdo é do corpo do card
+        cars-title: indica que aquele ementento é um título daquele card
+        text-truncate: estiliza o texto para caso ele estrapole o limite, não se quebre linha e sim apareça reticencias no final da lina, indicando que ten mais coisas a ser mostrada
+        d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
+        justify-content-center: os elementos vão ser centralizados
+        btn e btn-outline-primary: indica que vai ser um botão com os estilos dados
+        fw: indica o font-weight que vai ser atribuido, bold ou outros valores que vem junto a classe 
+        border-bottom: Indica que vai ter uma borda inferior
+        pb: O espaçamenti interno vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+        ms: indica a margin-left que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+        me: indica a margin-right que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+        mt: Indica que a magem do topo vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
+
+        -->
+
+        <div class="row mb-3 mt-3  d-flex justify-content-center d-none" id="armas">
+
+          <div class="col-sm-auto mb-3">
+            <div class="card me-auto ms-auto" style="width: 16rem;">
+              <img src="../img/armas/MAG7.png" class="card-img-top" alt="imagem MAG7" title="De Garena Free Fire">
+              <div class="card-body">
+                <h5 class="card-title">MAG7</h5>
+                <p class="card-text text-truncate">Com potência média e alta taxa de fogo, o MAG-7 é mais ágil do que a
+                  maioria das espingardas.</p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-mag7" class="btn btn-warning">Ver mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-auto mb-3">
+            <div class="card me-auto ms-auto" style="width: 16rem;">
+              <img src="../img/armas/Scythe.png" class="card-img-top" alt="imagem foice" title="De Garena Free Fire">
+              <div class="card-body">
+                <h5 class="card-title">Foice</h5>
+                <p class="card-text text-truncate">Uma arma corpo a corpo com alto dano e alcance relativamente longo.
+                </p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-foice" class="btn btn-warning">Ver mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-auto mb-3">
+            <div class="card me-auto ms-auto" style="width: 16rem;">
+              <img src="../img/armas/vector.png" class="card-img-top" alt="imagem Vector" title="De Garena Free Fire">
+              <div class="card-body">
+                <h5 class="card-title">Vector</h5>
+                <p class="card-text text-truncate">O Vector é a primeira arma Akimbo em Free Fire, tem um curto alcance
+                  efetivo, mas poder devastador à queima-roupa. "Akimbo" - Os jogadores podem segurar um Vetor em cada
+                  mão.</p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-vector" class="btn btn-warning">Ver mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!--  Modal  -> Isso para todos os modal abaixo
@@ -410,83 +598,7 @@
 
     </div>
 
-    <!--  Novas Armas 
-    
-    row: cria uma linha com grid de 12 colunas
-    col: cria uma coluna, o valor depois ex: col-12 indica quantas colunas do grid aquele elemento vai possuir
-    nav nav-tabs: indica que vai ser um menu de navegação na horizontal, porem com um estilo difereente do navbar-collapse
-    nav-item: indica que aquele elemento é um item do menu
-    nav-link: indica que aquele elemento é um link do menu
-    active: junto com a classe link, vai indicar que aquele link estar ativo no momento
-    card-body: indica que aquele conteúdo é do corpo do card
-    cars-title: indica que aquele ementento é um título daquele card
-    text-truncate: estiliza o texto para caso ele estrapole o limite, não se quebre linha e sim apareça reticencias no final da lina, indicando que ten mais coisas a ser mostrada
-    d-flex: display-flex, vai sem um elementos que possue filhos flexiveis
-    justify-content-center: os elementos vão ser centralizados
-    btn e btn-outline-primary: indica que vai ser um botão com os estilos dados
-    fw: indica o font-weight que vai ser atribuido, bold ou outros valores que vem junto a classe 
-    border-bottom: Indica que vai ter uma borda inferior
-    pb: O espaçamenti interno vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
-    ms: indica a margin-left que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
-    me: indica a margin-right que vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
-    mt: Indica que a magem do topo vai ser na escala de de 0 a 5 ou auto, escalas do bootstrap
-
-  -->
-
-    <div class="row mt-3">
-      <div class="col-12 border-bottom pb-3">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link" id="novos_personagens" aria-current="page" href="#novos_personagens">Novos
-              Personagens</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" id="novas_armas" href="#novas_armas">Novas Armas</a>
-          </li>
-        </ul>
-
-        <div class="row mb-3 mt-2  d-flex justify-content-center">
-
-          <div class="col-sm-auto mb-3">
-            <div class="card me-auto ms-auto" style="width: 16rem;">
-              <img src="../img/armas/MAG7.png" class="card-img-top" alt="imagem MAG7" title="De Garena Free Fire">
-              <div class="card-body">
-                <h5 class="card-title">MAG7</h5>
-                <p class="card-text text-truncate">Com potência média e alta taxa de fogo, o MAG-7 é mais ágil do que a
-                  maioria das espingardas.</p>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-mag7" class="btn btn-warning">Ver mais</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-auto mb-3">
-            <div class="card me-auto ms-auto" style="width: 16rem;">
-              <img src="../img/armas/Scythe.png" class="card-img-top" alt="imagem foice" title="De Garena Free Fire">
-              <div class="card-body">
-                <h5 class="card-title">Foice</h5>
-                <p class="card-text text-truncate">Uma arma corpo a corpo com alto dano e alcance relativamente longo.
-                </p>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-foice" class="btn btn-warning">Ver mais</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-auto mb-3">
-            <div class="card me-auto ms-auto" style="width: 16rem;">
-              <img src="../img/armas/vector.png" class="card-img-top" alt="imagem Vector" title="De Garena Free Fire">
-              <div class="card-body">
-                <h5 class="card-title">Vector</h5>
-                <p class="card-text text-truncate">O Vector é a primeira arma Akimbo em Free Fire, tem um curto alcance
-                  efetivo, mas poder devastador à queima-roupa. "Akimbo" - Os jogadores podem segurar um Vetor em cada
-                  mão.</p>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-vector" class="btn btn-warning">Ver mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--  Modal Armas -> Isso para todos os modal abaixo
+    <!--  Modal Armas -> Isso para todos os modal abaixo
       
       modal: indica que tudo o que estiver dentro dessa div com essa classe vai ser o conteúdo do modal
       fade: Vei deixar o modal com uma transição mais suave
@@ -496,81 +608,81 @@
       modal-footer: Indica que o que estiver dentro desse elemento vai ser o rodapé do modal
       m-3: Todas as margens vai possuir o valor 3 para o elemento que possuir essa clásse
       mb: a margin-bottom vai ser o valor passado
-      -->
+    -->
 
-      <div class="modal fade" id="modal-mag7" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">MAG7</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body m-3">
-              <p><span class="fw-bold">Dano:</span> 89</p>
-              <p><span class="fw-bold">Gama:</span> 15</p>
-              <p><span class="fw-bold">Revista:</span> 8</p>
-              <p><span class="fw-bold">Velocidade de Movimento:</span> 62</p>
-              <p><span class="fw-bold">Taxa de Fogo:</span> 58</p>
-              <p><span class="fw-bold">Velocidade de Recarga:</span> 55</p>
-              <p><span class="fw-bold">Precisão:</span> 10</p>
-              <p><span class="fw-bold">Penetração de Armadura:</span> 0</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-            </div>
+    <div class="modal fade" id="modal-mag7" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">MAG7</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="modal-foice" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Foice</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body m-3">
-              <p><span class="fw-bold">Dano:</span> 90</p>
-              <p><span class="fw-bold">Gama:</span> 6</p>
-              <p><span class="fw-bold">Revista:</span> 0</p>
-              <p><span class="fw-bold">Velocidade de Movimento:</span>82</p>
-              <p><span class="fw-bold">Taxa de Fogo:</span> 30</p>
-              <p><span class="fw-bold">Velocidade de Recarga:</span>0</p>
-              <p><span class="fw-bold">Precisão:</span>10</p>
-              <p><span class="fw-bold">Penetração de Armadura:</span>0</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-            </div>
+          <div class="modal-body m-3">
+            <p><span class="fw-bold">Dano:</span> 89</p>
+            <p><span class="fw-bold">Gama:</span> 15</p>
+            <p><span class="fw-bold">Revista:</span> 8</p>
+            <p><span class="fw-bold">Velocidade de Movimento:</span> 62</p>
+            <p><span class="fw-bold">Taxa de Fogo:</span> 58</p>
+            <p><span class="fw-bold">Velocidade de Recarga:</span> 55</p>
+            <p><span class="fw-bold">Precisão:</span> 10</p>
+            <p><span class="fw-bold">Penetração de Armadura:</span> 0</p>
           </div>
-        </div>
-      </div>
-      <div class="modal fade" id="modal-vector" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Vector</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body m-3">
-              <p><span class="fw-bold">Dano:</span>47</p>
-              <p><span class="fw-bold">Gama:</span>32</p>
-              <p><span class="fw-bold">Revista:</span>30</p>
-              <p><span class="fw-bold">Velocidade de Movimento:</span>69</p>
-              <p><span class="fw-bold">Taxa de Fogo:</span>81</p>
-              <p><span class="fw-bold">Velocidade de Recarga:</span>62</p>
-              <p><span class="fw-bold">Precisão:</span>61</p>
-              <p><span class="fw-bold">Penetração de Armadura:</span> 0</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!--  Carrouseu 
+    <div class="modal fade" id="modal-foice" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Foice</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body m-3">
+            <p><span class="fw-bold">Dano:</span> 90</p>
+            <p><span class="fw-bold">Gama:</span> 6</p>
+            <p><span class="fw-bold">Revista:</span> 0</p>
+            <p><span class="fw-bold">Velocidade de Movimento:</span>82</p>
+            <p><span class="fw-bold">Taxa de Fogo:</span> 30</p>
+            <p><span class="fw-bold">Velocidade de Recarga:</span>0</p>
+            <p><span class="fw-bold">Precisão:</span>10</p>
+            <p><span class="fw-bold">Penetração de Armadura:</span>0</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-vector" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Vector</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body m-3">
+            <p><span class="fw-bold">Dano:</span>47</p>
+            <p><span class="fw-bold">Gama:</span>32</p>
+            <p><span class="fw-bold">Revista:</span>30</p>
+            <p><span class="fw-bold">Velocidade de Movimento:</span>69</p>
+            <p><span class="fw-bold">Taxa de Fogo:</span>81</p>
+            <p><span class="fw-bold">Velocidade de Recarga:</span>62</p>
+            <p><span class="fw-bold">Precisão:</span>61</p>
+            <p><span class="fw-bold">Penetração de Armadura:</span> 0</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Carrouseu 
 
     carousel: Vai ter os estilos de um carrouseu
     carousel-dark : Vai possuir um tema escuro o carrouseu
@@ -585,52 +697,52 @@
     carousel-control-next: vai ter um controle que vai mudar o slide para o posterior
     -->
 
-    <div id="carouselExampleCaptions" class="carousel carousel-dark slide mt-5 mb-5" data-bs-ride="carousel">
+  <div id="carouselExampleCaptions" class="carousel carousel-dark slide mt-5 mb-5" data-bs-ride="carousel">
 
-      <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-      </ol>
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
 
-      <div class="carousel-inner">
+    <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <img src="../img/cr7.jpg" class="d-block w-100" alt="promoção">
-          <div class="carousel-caption d-none d-md-block bg-secondary">
-            <h5 class="fw-bold">Novo Personagem</h5>
-            <p>CR7 com habilidades incomuns chega ao jogo .</p>
-          </div>
+      <div class="carousel-item active">
+        <img src="../img/cr7.jpg" class="d-block w-100" alt="promoção">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="fw-bold">Novo Personagem</h5>
+          <p>CR7 com habilidades incomuns chega ao jogo .</p>
         </div>
-
-        <div class="carousel-item">
-          <img src="../img/alok.jpg" class="d-block w-100" alt="promoção">
-          <div class="carousel-caption d-none d-md-block bg-secondary">
-            <h5 class="fw-bold">Sendo trocado?</h5>
-            <p>Alok, antes o personagem indispensável, teve uma queda significativa com o usu do CR7.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="../img/moco.png" class="d-block w-100" alt="promoção">
-          <div class="carousel-caption d-none d-md-block bg-secondary">
-            <h5 class="fw-bold"> A Hacker</h5>
-            <p>Com sua marcação ao acertar o oponente, Moco é uma personagem essencial para os suportes.</p>
-          </div>
-        </div>
-
       </div>
 
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </a>
+      <div class="carousel-item">
+        <img src="../img/alok.jpg" class="d-block w-100" alt="promoção">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="fw-bold">Sendo trocado?</h5>
+          <p>Alok, antes o personagem indispensável, teve uma queda significativa com o usu do CR7.</p>
+        </div>
+      </div>
 
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </a>
+      <div class="carousel-item">
+        <img src="../img/moco.png" class="d-block w-100" alt="promoção">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="fw-bold"> A Hacker</h5>
+          <p>Com sua marcação ao acertar o oponente, Moco é uma personagem essencial para os suportes.</p>
+        </div>
+      </div>
+
     </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
   </div>
 
   <!--  footer
@@ -642,7 +754,9 @@
   fs: font-size com escala de 1 a 5, escalas predefinidas pelo bootstrap 
   badge: vai ter um efeito na palavra, uma decoração
   bg-warning: especifica a cor do back-ground, no caso um tom "amarelo"
-  -->
+  
+-->
+
   <footer>
     <div class="d-flex justify-content-center pt-3 bg-dark text-white mt-2">
       <div class="row">

@@ -47,7 +47,7 @@ function verificarQ2() {
 }
 
 function verificarQ3() {
-    let resposta = document.getElementById('1temp');
+    let resposta = document.getElementById('2temp');
     let bg = document.getElementById("peg3");
 
     if (resposta.checked) {
